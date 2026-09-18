@@ -1,23 +1,41 @@
-import UserCard from "./components/UserCard"
+import UserCard from "./components/UserCard.jsx"
+import Header from "./components/Header.jsx"
+import Footer from "./components/Footer.jsx"
+
 import Shivaji from "./assets/shivaji.jpg"
 import Prithvirajchauhan from "./assets/prithviraj.jpg"
 import Maharanapratab from "./assets/maharana.png"
 
-
 function App() {
 
-
   return (
+    <div>
+      
+    <Header  title="Great Indian Warriors" />
     <div className="container">
-      <UserCard name="Shivaji Maharaj" desc="desc1" image={Shivaji} style={{
-        "border-radius": "20px"
-      }}/>
-      <UserCard name="Prithvi Raj Chauhan" desc="desc2" image={Prithvirajchauhan}  style={{
-        "border-radius": "20px"
-      }}/>
-      <UserCard name="Maharana Pratab" desc="desc3" image={Maharanapratab} style={{
-        "border-radius": "20px"
-      }}/>
+
+
+      <div className="cards">
+
+        <UserCard
+          name="Chattraparti Shivaji Maharaj"
+          desc="Great Maratha King"
+          image={Shivaji} />
+
+        <UserCard
+          name="Prithviraj Chauhan"
+          desc="Brave Indian King"
+          image={Prithvirajchauhan} />
+
+        <UserCard
+          name="Maharana Pratap"
+          desc="Great Rajput Warrior"
+          image={Maharanapratab} />
+
+      </div>
+
+    </div>
+    <Footer text= "© 2026 My First React App. All rights reserved."/>
     </div>
   )
 }

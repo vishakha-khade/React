@@ -2,12 +2,18 @@ import React from 'react'
 
 import "./UserCard.css"
 
-const UserCard = (props) => {
-  return (
-    <div className='user-container' style={props.style}>
-      <p id='user-name'>{props.name} </p>
-      <img id='user-img' src={props.image} alt={props.name}></img>
-      <p id='user-desc'>{props.desc}</p>
+function UserCard(props) {
+
+return (
+    <div
+      className="card"
+      style={{ borderRadius: "20px" }}
+    >
+      <img src={props.image} />
+
+      <h2>{props.name}</h2>
+
+      <p>{props.desc}</p>
     </div>
   )
 }
