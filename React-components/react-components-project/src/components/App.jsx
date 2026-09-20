@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useState } from "react";
 import './App.css'
+import Home from './Home';
+import Contact from "./Contact";
 
 function App() {
   return (
   <div>
-    hello React
+    <Home />
   </div>
   )
 }

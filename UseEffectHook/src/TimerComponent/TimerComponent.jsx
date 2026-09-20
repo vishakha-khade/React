@@ -6,17 +6,27 @@ function TimerComponet() {
 
   useEffect(() => {
     
-    const intervalId = setInterval (() => {
+    const intervalIn = setInterval (() => {
       console.log("setInterval executed");
       setSeconds(prevSeconds => prevSeconds + 1);
     }, 1000);
 
+    //It will run on first render 
+    
     return() => {
       console.log("Time to stop");
-      clearInterval(intervalId);
+      clearInterval(intervalIn);
     }
   }, []);
-  //It will run on first render
+
+  //[ Variation : 5: 
+
+  // useEffect(() => {
+  //   alert("Count is updated")
+  //   return()=>{
+  //     alert("count is unmounted from Ui");
+  //   }
+  // }, [seconds]).. ]...
 
   return (
     <div>
@@ -24,5 +34,6 @@ function TimerComponet() {
     </div>
   );
 }
+
 
 export default TimerComponet;
