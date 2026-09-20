@@ -22,7 +22,7 @@ function App(){
     <>
     <h1>Minutes: {minute}</h1>
     
-    {/* <TimerComponet /> */}
+    <TimerComponet />
     Hello 
     </>
   )
