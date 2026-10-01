@@ -1,14 +1,77 @@
-import { useState } from 'react'
-import './App.css'
+import { useState, useEffect } from "react";
+import "./App.css";
+import jeansImage from "./assets/jeans.jpg";
+import dressImage from "./assets/dress.jpg";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const productPrice = 500;
+  const dressPrice = 1000;
+
+  const [quantity, setQuantity] = useState(1);
+
+  const increaseQuantity = () => {
+    if (quantity < 10) {
+      setQuantity(quantity + 1);
+    } else {
+      alert("You can buy only 10 items at a time");
+    }
+  };
+
+  const totalPrice = productPrice * quantity;
+
+  useEffect(() => {
+  console.log(`Cart updated: ${quantity} jeans`);
+}, [quantity]);
+
+  const decreaseQ = () => {
+    if (quantity > 0) {
+      setQuantity(quantity - 1);
+    } else {
+      alert("Quantity cannot be less than 0");
+    }
+  };
 
   return (
-    <div>
-      Hello Vite + React!
+    <div className="product-card">
+
+    <div className="jean-card">
+      <img src={jeansImage} alt="jeans" className="product-image"/>
+      <h1>Jeans</h1>
+      <p>Price: {productPrice}</p>
+
+      <button onClick={increaseQuantity} className="increase-button">+</button>
+      <span>{quantity}</span>
+      <button onClick={decreaseQ} className="decrease-button">
+        -
+      </button>
+
+      <h3 className="total">Total Price: {totalPrice} </h3>
+
+      <span className="bag-message">
+        Added {quantity} item{quantity > 1 ? "s" : ""} in bag
+      </span>
+      </div>
+
+     <div className="top-card">
+      <img src={dressImage} alt="dress" className="product-image"/>
+      <h1>Dress</h1>
+      <p>Price: {dressPrice}</p>
+
+      <button onClick={increaseQuantity} className="increase-button">+</button>
+      <span>{quantity}</span>
+      <button onClick={decreaseQ} className="decrease-button">
+        -
+      </button>
+
+      <h3 className="total">Total Price: {totalPrice} </h3>
+
+      <span className="bag-message">
+        Added {quantity} item{quantity > 1 ? "s" : ""} in bag
+      </span>
+      </div>
+
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
