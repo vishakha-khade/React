@@ -51,9 +51,12 @@ function App() {
   
 
   return (
-    <div className="product-card">
+    <div>
+      <h1 style={{ textAlign: "center", paddingTop: "15px"}}>Products Card</h1>
+    <div className="product-card"> 
 
     <div className="jean-card">
+      
       <img src={jeansImage} alt="jeans" className="product-image"/>
       <h1>Jeans</h1>
       <p>Price: {productPrice}/-</p>
@@ -88,6 +91,9 @@ function App() {
         Added {dressQuantity} item{dressQuantity > 1 ? "s" : ""} in bag
       </span>
       </div>
+
+    </div>
+    <footer style={{textAlign: "center", color: "grey", paddingTop:"8px"}}>@ 2026 Products Card Created with React.</footer>
 
     </div>
   );

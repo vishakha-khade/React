@@ -11,9 +11,9 @@ body {
 }
 
 .product-card {
-  width: min(800px);
-  height: 700px;
-  margin: 60px auto;
+  width: min(700px);
+  height: 600px;
+  margin: 20px auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
@@ -23,7 +23,7 @@ body {
 .top-card {
   background: #ffffff;
   border-radius: 20px;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: 0.3s ease;
@@ -38,12 +38,12 @@ body {
 
 .product-image {
   width: 100%;
-  height: 420px;
+  height: 400px;
   padding: 20px;
   object-fit: cover;
   object-position: top;
   border-radius: 15px;
-  margin-bottom: 18px;
+  margin-bottom: 2px;
 }
 
 
@@ -59,7 +59,7 @@ body {
 .top-card > p {
   font-size: 17px;
   color: #555;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .increase-button,
