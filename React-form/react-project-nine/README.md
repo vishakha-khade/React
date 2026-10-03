@@ -1,16 +1,43 @@
-# React + Vite
+# Student Registration Form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple Student Registration Form built using React. The project was created to practice handling form inputs and user interactions in React.
 
-Currently, two official plugins are available:
+The form includes fields for first name, last name, mobile number, email, gender, qualification, and skills. I used React state and event handlers to capture and display the values entered or selected by the user.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- First name and last name input fields
+- Mobile number and email fields
+- Gender selection using radio buttons
+- Qualification selection using a dropdown
+- Multiple skill selection using checkboxes
+- Displays selected values dynamically
+- Basic form validation
+- Responsive and clean form design
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies Used
 
-## Expanding the ESLint configuration
+- React
+- JavaScript
+- CSS
+- Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## What I Practiced
+
+While building this project, I practiced:
+
+- Using `useState` in React
+- Handling input values with `onChange`
+- Working with radio buttons
+- Working with checkboxes
+- Handling dropdown/select values
+- Conditional rendering using `&&`
+- Managing form data with React state
+- Basic form validation
+- Creating a responsive UI with CSS
+
+## Purpose
+
+The main purpose of this project was to understand how forms work in React and how user input can be managed using state and event handlers.
+
+This project is part of my React learning journey, where I am building small projects to strengthen my understanding of React fundamentals.
