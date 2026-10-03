@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Inception",
+    "category": "Sci-Fi",
+    "year": 2010,
+    "rating": 8.8,
+    "language": "English"
+  },
+  {
+    "id": 2,
+    "title": "3 Idiots",
+    "category": "Comedy",
+    "year": 2009,
+    "rating": 8.4,
+    "language": "Hindi"
+  },
+  {
+    "id": 3,
+    "title": "Dangal",
+    "category": "Sports",
+    "year": 2016,
+    "rating": 8.3,
+    "language": "Hindi"
+  },
+  {
+    "id": 4,
+    "title": "Interstellar",
+    "category": "Sci-Fi",
+    "year": 2014,
+    "rating": 8.7,
+    "language": "English"
+  },
+  {
+    "id": 5,
+    "title": "Drishyam",
+    "category": "Thriller",
+    "year": 2015,
+    "rating": 8.2,
+    "language": "Hindi"
+  },
+  {
+    "id": 6,
+    "title": "Spirited Away",
+    "category": "Animation",
+    "year": 2001,
+    "rating": 8.6,
+    "language": "Japanese"
+  }
+]
