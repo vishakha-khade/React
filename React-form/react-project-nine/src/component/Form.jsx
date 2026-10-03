@@ -3,15 +3,14 @@ import { useState } from "react";
 import "./Form.css";
 
 function Form() {
-  const [html, setHtml] = useState(false);
-  const [css, setCss] = useState(false);
-  const [javascript, setJavascript] = useState(false);
+  const [html, setHtml] = useState();
+  const [css, setCss] = useState();
+  const [javascript, setJavascript] = useState();
 
   const [gender, setGender] = useState();
   const [fisrtName, setFirstName] = useState("");
   const [lastName, setLastname] = useState("");
   const [qualification, setQualification] = useState("");
-  const [skills, setSkills] = useState("");
 
   return (
     <div>
@@ -35,7 +34,7 @@ function Form() {
           value={lastName}
           className="lastName"
           required
-          onChange={(e) =>{
+          onChange={(e) => {
             setLastname(e.target.value);
           }}
         />
@@ -47,8 +46,9 @@ function Form() {
         <input type="email" placeholder="Enter your email id" required />
         <br />
         <p>Gender: {gender}</p>
-        <input
+        Male<input
           type="radio"
+          required
           name="gender"
           value="Male"
           onChange={(e) => {
@@ -57,9 +57,9 @@ function Form() {
             }
           }}
         />
-        Male
-        <br></br>
-        <input
+        
+       
+        Female<input
           type="radio"
           name="gender"
           value="Female"
@@ -69,9 +69,8 @@ function Form() {
             }
           }}
         />
-        Female
-        <br />
-        <input
+        
+         Others<input
           type="radio"
           name="gender"
           value="Other"
@@ -81,14 +80,18 @@ function Form() {
             }
           }}
         />
-        Others
+       
         <br />
         <p>Qualifications: {qualification}</p>
-        <select name="qualifications" id="qualifications" required
-        onChange={(e) =>{
-            setQualification(e.target.value)
-        }}>
-          <option value="opt">Select</option>
+        <select
+          name="qualifications"
+          id="qualifications"
+          required
+          onChange={(e) => {
+            setQualification(e.target.value);
+          }}
+        >
+          <option value="">Select</option>
           <option value="10th Passed">10th Passed</option>
           <option value="12th Passed">12th Passed</option>
           <option value="1st year">1st year</option>
@@ -97,7 +100,11 @@ function Form() {
           <option value="Graduate">Graduate</option>
         </select>
         <br />
-        <h3>Skills :</h3>
+        <h3>
+          Skills : {html && "HTML "}
+          {css && "CSS "}
+          {javascript && "JavaScript"}
+        </h3>
         <input
           type="checkbox"
           value="html"
@@ -106,7 +113,7 @@ function Form() {
             setHtml(e.target.checked);
             console.log(e.target.value);
           }}
-        />{" "}
+        />
         HTML
         <br />
         <input
