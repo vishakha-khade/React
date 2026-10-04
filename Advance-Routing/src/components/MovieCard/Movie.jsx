@@ -1,8 +1,10 @@
 import React from 'react'
 import './Movie.css';
+import { Link } from "react-router-dom"
 
 const Movie = ({ id, title, category, year, rating, language}) => {
   return (
+    <Link to={`/details/${id}`}>
     <div className="movie-card">
       <p>{id}</p>
       <h2>{title}</h2>
@@ -12,6 +14,7 @@ const Movie = ({ id, title, category, year, rating, language}) => {
       <p>{rating}</p>
 
     </div>
+    </Link>
   );
 }
 
